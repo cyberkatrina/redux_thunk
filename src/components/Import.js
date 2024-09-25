@@ -44,7 +44,7 @@ const Import = (props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.makes.map((make, idx) => (
+          {props.makes.map((make) => (
             <TableRow key={make.id}>
               <TableCell component="th" scope="row">
                 {make.MakeId}
