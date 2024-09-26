@@ -44,7 +44,7 @@ const Import = (props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.makes.map((make) => (
+          {props.makes.map((make, idx) => (
             <TableRow key={make.id}>
               <TableCell component="th" scope="row">
                 {make.MakeId}
@@ -58,7 +58,7 @@ const Import = (props) => {
                     aria-controls={open ? "long-menu" : undefined}
                     aria-expanded={open ? "true" : undefined}
                     aria-haspopup="true"
-                    onClick={handleClick}
+                    onClick={(event) => handleClick(event, idx)}
                   >
                     <MoreVertIcon />
                   </IconButton>
